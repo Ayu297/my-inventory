@@ -1,6 +1,14 @@
 package com.example.backend.controller;
 
 
+import com.example.backend.model.dto.request.CreateProductRequest;
+import com.example.backend.model.dto.request.PagingRequest;
+import com.example.backend.model.dto.request.SearchProductRequest;
+import com.example.backend.model.dto.request.UpdateProductRequest;
+import com.example.backend.model.dto.response.CommonResponse;
+import com.example.backend.model.dto.response.PagingResponse;
+import com.example.backend.model.dto.response.ProductResponse;
+import com.example.backend.service.ProductService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +21,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-import static com.example.InvSync.model.constant.ApiUrl.*;
+import static com.example.backend.model.constant.ApiUrl.*;
+
 
 @RequiredArgsConstructor
 @RestController
